@@ -1,7 +1,8 @@
 // ==========================================================================
 // Project:   Flow
-// Copyright: @2012 My Company, Inc.
+// Copyright: @2012 Tero Multisilta
 // ==========================================================================
+
 /*globals Flow */
 
 Flow = SC.Application.create();
