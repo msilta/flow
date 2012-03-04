@@ -8,7 +8,7 @@
 @import "compass/reset";
 
 /* CSS Reset */
-@include global-reset;
+/*@include global-reset;*/
 
 body {
   line-height: 1;

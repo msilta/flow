@@ -15,7 +15,7 @@ Flow.Project = SC.Object.extend({
 Flow.CreateProjectView = SC.TextField.extend({
   insertNewline: function() {
     var value = this.get('value');
- 
+
     if (value) {
       Flow.projectListController.createProject(value);
       this.set('value', '');
@@ -29,12 +29,12 @@ Flow.MarkDoneView = SC.Checkbox.extend({
 });
 
 Flow.ProjectListStatsView = SC.TemplateView.extend({
-  remainingBinding: 'Flow.projectListController.remaining',
- 
-  displayRemaining: function() {
-    var remaining = this.get('remaining');
-    return remaining + (remaining === 1 ? " item" : " items");
-  }.property('remaining')
+  remainingBinding: 'Flow.projectListController.remaining',
+
+  displayRemaining: function() {
+    var remaining = this.get('remaining');
+    return remaining + (remaining === 1 ? " item" : " items");
+  }.property('remaining')
 });
 
 SC.ready(function() {
@@ -46,7 +46,7 @@ SC.ready(function() {
 
 Flow.projectListController = SC.ArrayController.create({
   content: [],
- 
+
   createProject: function(title) {
     var project = Flow.Project.create({ title: title });
     this.pushObject(project);
