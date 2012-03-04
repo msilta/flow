@@ -1,8 +1,8 @@
 # ==========================================================================
 # Project:   Flow
-# Copyright: @2012 My Company, Inc.
+# Copyright: @2012 Tero Multisilta
 # ==========================================================================
 
 # Add initial buildfile information here
-config :all, :required => "sproutcore/core_foundation", :theme => "sproutcore/empty_theme"
-
+config :all, :required => "sproutcore", :theme => "sproutcore/ace"
+config :flow, :css_theme => 'ace.flow'

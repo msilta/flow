@@ -8,7 +8,7 @@
 @import "compass/reset";
 
 /* CSS Reset */
-/*@include global-reset;*/
+@include global-reset;
 
 body {
   line-height: 1;
@@ -80,20 +80,8 @@ $border: 1px solid #bbb;
       float: left;
     }
 
-    .sc-button {
-      @include background-image(linear-gradient(#F9F9F9 1%, #DDD, #F2F2F2, #F7F7F7));
-      border: 1px solid #828282;
-      color: #000;
+    .sc-button-view {
       float: right;
-      padding: 0 5px;
-
-      &:hover {
-        @include background-image(linear-gradient(#FFF 1%, #E2E2E2, #F7F7F7, #FCFCFC));
-      }
-
-      &.is-active {
-        @include background-image(linear-gradient(#EFEFEF 1%, #D3D3D3, #E8E8E8, #EDEDED));
-      }
     }
   }
 

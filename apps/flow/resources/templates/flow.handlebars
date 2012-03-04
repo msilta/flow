@@ -5,8 +5,7 @@
 {{/view}}
 
 {{#view Flow.ProjectListStatsView id="stats"}}
-  {{#view SC.Button classBinding="isActive" target="Flow.projectListController" action="clearCompletedProjects"}}
-    Clear Completed Projects
+  {{#view SC.ButtonView title="Clear Completed Projects" classBinding="isActive" target="Flow.projectListController" action="clearCompletedProjects"}}
   {{/view}}
   {{displayRemaining}} remaining
 {{/view}}
