@@ -1,5 +1,9 @@
-require('views/project_list');
+// ==========================================================================
+// Project:   Flow
+// Copyright: @2012 Tero Multisilta
+// ==========================================================================
 
+require('views/project_list');
 
 Flow.mainPage = SC.Page.create({
   
