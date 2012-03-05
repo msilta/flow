@@ -1,18 +1,19 @@
-<h1>Projects</h1>
-
-{{#view Flow.CreateProjectView}}
-<input id="new-project" type="text" placeholder="New project" >
-{{/view}}
-
-{{#view Flow.ProjectListStatsView id="stats"}}
-  {{#view SC.ButtonView title="Clear Completed Projects" classBinding="isActive" target="Flow.projectListController" action="clearCompletedProjects"}}
+<div id="flow">
+  <h1>Projects</h1>
+  
+  {{#view Flow.CreateProjectView}}
+  <input id="new-project" type="text" placeholder="New project" >
   {{/view}}
-  {{displayRemaining}} remaining
-{{/view}}
-
-{{view SC.Checkbox class="mark-all-done" title="Mark All as Done" valueBinding="Flow.projectListController.allAreDone"}}
-
-{{#collection SC.TemplateCollectionView contentBinding="Flow.projectListController" itemClassBinding="content.status"}}
-  {{view Flow.MarkDoneView}}
-{{/collection}}
-
+  
+  {{#view Flow.ProjectListStatsView id="stats"}}
+    {{#view SC.ButtonView title="Clear Completed Projects" classBinding="isActive" target="Flow.projectListController" action="clearCompletedProjects"}}
+    {{/view}}
+    {{displayRemaining}} remaining
+  {{/view}}
+  
+  {{view SC.Checkbox class="mark-all-done" title="Mark All as Done" valueBinding="Flow.projectListController.allAreDone"}}
+  
+  {{#collection SC.TemplateCollectionView contentBinding="Flow.projectListController" itemClassBinding="content.status"}}
+    {{view Flow.MarkDoneView}}
+  {{/collection}}
+</div>

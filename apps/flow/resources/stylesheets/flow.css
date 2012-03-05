@@ -37,12 +37,7 @@ body, html {
   background-color: #F2F4F5;
 }
 
-.sc-view {
-  position: relative;
-  overflow: visible;
-}
-
-$width: 600px;
+/*$width: 600px;*/
 $border: 1px solid #bbb;
 
 #flow {
@@ -52,12 +47,11 @@ $border: 1px solid #bbb;
   $padding: 10px;
   $header-height: 20px;
 
-  position: absolute;
-  width: $width;
+  /*width: $width;*/
   left: 50%;
-  margin-top: 38px;
+  /*margin-top: 38px;*/
   border: $border;
-  margin-left: -300px;
+  /*margin-left: -300px;*/
   background-color: #fff;
   padding: ($header-height + $padding * 2) $padding $padding;
 
@@ -80,6 +74,10 @@ $border: 1px solid #bbb;
       float: left;
     }
 
+    .sc-view {
+      position: relative;
+    }
+    
     .sc-button-view {
       float: right;
     }
@@ -90,7 +88,7 @@ $border: 1px solid #bbb;
     @include single-box-shadow(rgba(0,0,0,0.6), 0, 0, 10px, -2px);
     color: #999;
     background-color: rgb(240,240,240);
-    width: $width - ($padding) - 2px;
+    /*width: $width - ($padding) - 2px;*/
     font-size: 30px;
     font-family: Helvetica, sans-serif;
     padding: 5px;
@@ -108,8 +106,8 @@ $border: 1px solid #bbb;
     @include single-text-shadow(white, 0, 1px, 1px);
 
     font-size: 15px;
-    position: absolute;
-    width: $width;
+    /*position: absolute;*/
+    /*width: $width;*/
     height: $header-height;
     color: rgb(83,86,94);
     top: 0;
@@ -129,13 +127,12 @@ $border: 1px solid #bbb;
 
     li {
       padding: 5px;
+      list-style: none outside none;
       
       &.status {
         color: #B7B7B7;
         text-decoration: line-through;
       }
-
-      list-style: none outside none;
     }
 
     li:nth-child(odd) {
