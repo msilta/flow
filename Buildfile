@@ -4,5 +4,4 @@
 # ==========================================================================
 
 # Add initial buildfile information here
-config :all, :required => "sproutcore", :theme => "sproutcore/ace"
-config :flow, :css_theme => 'ace.flow'
+config :all, :required => "sproutcore"

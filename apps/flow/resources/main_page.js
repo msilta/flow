@@ -7,14 +7,9 @@ require('views/project_list');
 
 Flow.mainPage = SC.Page.create({
   
-  pageName: 'Flow.mainPage',
-  
   mainPane: SC.MainPane.design({
-    
     childViews: [SC.TabView.design({
-      
       value: 'welcome',
-      
       items: [
         { title: "Welcome", value: "welcome" },
         { title: "Projects", value: "projects" },
@@ -24,13 +19,9 @@ Flow.mainPage = SC.Page.create({
       
       itemTitleKey: 'title',
       itemValueKey: 'value',
-            
       layout: { left:12, right:12, top:12, bottom:12 },
-      
       userDefaultKey: "mainPane"
-      
     })]
-    
   }),
 
   welcome: SC.LabelView.design({

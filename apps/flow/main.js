@@ -5,7 +5,10 @@
 
 Flow.main = function main() {
   document.title = "Flow";
-  Flow.getPath('mainPage.mainPane').append();
+  
+  var statechart = Flow.statechart;
+  SC.RootResponder.responder.set('defaultResponder', statechart); 
+  statechart.initStatechart();
 };
 
 function main() { Flow.main(); }
