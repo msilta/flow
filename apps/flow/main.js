@@ -5,10 +5,7 @@
 
 Flow.main = function main() {
   document.title = "Flow";
-  
-  var statechart = Flow.statechart;
-  SC.RootResponder.responder.set('defaultResponder', statechart); 
-  statechart.initStatechart();
+  Flow.statechart.initStatechart();
 };
 
 function main() { Flow.main(); }

@@ -7,8 +7,9 @@ Flow.projectListController = SC.ArrayController.create({
   content: [],
 
   createProject: function(title) {
-    var project = Flow.Project.create({ title: title });
-    this.pushObject(project);
+    Flow.store.createRecord(Flow.Project, {
+      title: title
+    });
   },
 
   remaining: function() {
@@ -16,7 +17,11 @@ Flow.projectListController = SC.ArrayController.create({
   }.property('@each.status'),
 
   clearCompletedProjects: function() {
-    this.filterProperty('status', true).forEach(this.removeObject, this);
+    this.filterProperty('status', true).forEach(
+      function(item) {
+        Flow.store.destroyRecord(null,null,item.storeKey);
+      }
+    );
   },
 
   allAreDone: function(key, value) {

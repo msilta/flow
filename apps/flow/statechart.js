@@ -1,4 +1,8 @@
 Flow.statechart = SC.Statechart.create({
-  initialState: 'readyState',
-  readyState: SC.State.plugin('Flow.ReadyState'),
+  trace: YES,
+ 
+  rootState: SC.State.design({
+    initialSubstate: "READY",
+    READY: SC.State.plugin('Flow.READY')
+  })
 });

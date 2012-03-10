@@ -3,7 +3,7 @@
 // Copyright: @2012 Tero Multisilta
 // ==========================================================================
 
-Flow.Project = SC.Object.extend({
-  title: null,
-  status: false
+Flow.Project = SC.Record.extend({
+  status: SC.Record.attr(Boolean),
+  title: SC.Record.attr(String)
 });

@@ -3,8 +3,6 @@
 // Copyright: @2012 Tero Multisilta
 // ==========================================================================
 
-require('views/project_list');
-
 Flow.mainPage = SC.Page.create({
   
   mainPane: SC.MainPane.design({
